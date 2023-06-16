@@ -1,4 +1,4 @@
-import 'package:animalkingdom_admin_app/app/search/presenter/atoms/app_store.dart';
+import 'package:animalkingdom_admin_app/app/search/presenter/atoms/app_atom.dart';
 import 'package:animalkingdom_admin_app/app/search/presenter/themes/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -12,8 +12,6 @@ class AppWidget extends StatefulWidget {
 }
 
 class _AppWidgetState extends State<AppWidget> {
-  final appStore = Modular.get<AppStore>();
-
   @override
   void initState() {
     super.initState();
@@ -23,12 +21,12 @@ class _AppWidgetState extends State<AppWidget> {
   Widget build(BuildContext context) {
     Modular.setInitialRoute('/home/');
 
-    final themeMode = context.select(() => appStore.themeMode);
+    context.select(() => [themeModeAtom.value]);
 
     return MaterialApp.router(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      themeMode: themeMode,
+      themeMode: themeModeAtom.value,
       theme: lightTheme,
       darkTheme: darkTheme,
       routerDelegate: Modular.routerDelegate,
