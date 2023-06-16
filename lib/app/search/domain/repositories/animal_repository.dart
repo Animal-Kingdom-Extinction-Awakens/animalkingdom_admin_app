@@ -4,7 +4,7 @@ import 'package:dartz/dartz.dart';
 
 abstract class AnimalRepository {
   Future<Either<AnimalFailure, List<Animal>>> getAnimals();
-  Future<Either<AnimalFailure, Animal>> getAnimal(int id);
+  Future<Either<AnimalFailure, Animal>> getAnimal(String id);
   Future<Either<AnimalFailure, void>> createAnimal(Animal animal);
   Future<Either<AnimalFailure, void>> updateAnimal(Animal animal);
   Future<Either<AnimalFailure, void>> deleteAnimal(int id);
