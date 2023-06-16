@@ -41,6 +41,7 @@ dependencies:
   realm: ^1.2.0
   intl: ^0.18.1
   rx_notifier: ^2.2.3
+  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +56,7 @@ dev_dependencies:
   mocktail: ^0.3.0
   rx_notifier_generator: ^1.0.2
   build_runner: ^2.4.4
+  mockito: ^5.4.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
